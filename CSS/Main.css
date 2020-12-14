@@ -1,0 +1,153 @@
+#accueil
+{
+    background-color: rgba(121,121,121);    /*à appliquer sur la page active à chaque fois*/
+}
+
+#lien_carte{
+    width:10vw;
+    margin-top:21vh;
+    margin-left:87vw;
+    position: absolute;
+}
+
+ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+fieldset{
+    border:0;
+    margin-left:-3.5%;
+}
+
+#filtres
+{
+    position:fixed; 
+    width:10%;
+    margin-left:88%;
+    margin-top:15%;
+    border-style: solid;
+    border-color: black;
+}
+
+div form ul li ul li
+{
+    margin-left:7%;
+}
+
+h2
+{
+    font-size: 150%;
+    margin-top:3%;
+    margin-bottom:5%;
+    margin-left:2%;
+}
+
+h3
+{
+    font-size: 100%;
+    margin-top:2%;
+    margin-bottom: 2.5%;
+    margin-left:5%;
+}
+
+input[type=range]
+{
+    width: 80%;
+    margin-left:5%;
+}
+
+#filtre_date
+{
+    margin-left:5%;
+}
+
+#resultats{
+    margin:3%;
+}
+
+#date_reinit_button{
+    margin-left:5%;
+    margin-top:3%;
+}
+
+#destinations{
+    width: 85%;
+    margin-top:14%;
+    margin-left:2%;
+    column-gap:4%;
+    display:grid;
+    grid-template-columns: 48% 48%;
+}
+
+.div_destination{
+    position:relative;
+}
+
+.div_destination:hover > .dates_nndispo{
+    opacity: 1;
+}
+
+.im2
+{
+    position: relative;
+    transition : .8s;
+    transition-delay: .3s;
+    width: 40vw;
+    z-index: 2;
+}
+
+.im1{
+    width:40vw;
+    z-index : 1;
+    position: absolute;
+}
+
+
+.im2:hover
+{
+    opacity : 0
+}
+
+.nom{
+    color:white;
+    font-size: 3em;
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    z-index: 3; 
+    top:1%;
+    left:1%;
+}
+
+.dates_nndispo{
+    position : absolute;
+    z-index: 3; 
+    color:white;
+    font-size: 1em;
+    background-color: rgba(0,0,0,0.3);
+    top:15%;
+    left:1%;
+    opacity:.5;
+}
+
+.prix{
+    position: absolute;
+    z-index: 3; 
+    color:white;
+    font-size: 3em;
+    background-color: rgba(0,0,0,0.3);
+    top:1%;
+    right:1%;
+}
+
+.temp{
+    color:white;
+    font-size: 3em;
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    z-index: 3; 
+    bottom:2%;
+    left:1%;
+}

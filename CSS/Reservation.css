@@ -1,0 +1,32 @@
+#offre{
+    margin-top: 12%;
+    margin-left:.5%;
+}
+
+h1{
+    font-family:"Garamond";
+}
+
+#label{
+    position: absolute;
+}
+
+p input{
+    margin-top:4%;
+}
+
+.p_input{
+    height: 1.14em;
+}
+
+#input{
+    width : 20%;
+    margin-left : 11%;
+    margin-top : 0;
+    position: relative;
+}
+
+#erreur{
+    color:red;
+    font-weight: bold;
+}

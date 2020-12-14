@@ -1,0 +1,115 @@
+#scroll_top_button{
+    left:49vw;
+    margin-top:23vh;
+    position:fixed;
+    z-index:6;
+    background-image:url("../Images/Top_Button.jpg");
+    background-size: 100%;
+    width:2%;
+    height:4%;
+    border-radius: 100%;
+    text-indent:-99999px;
+    display:none;
+}
+
+#logo
+{
+    height:8vw;
+}
+
+body div form input
+{
+    border-color: black;
+    border-width: 1px;
+}
+
+#back_button
+{
+    position:fixed;
+    background-image: url("../Images/Back_Button.jpg");
+    background-size: 95%;
+    margin-top: .1%;
+    margin-left: .1%;
+    width : 2.5em;
+    height: 1.7em;
+    z-index: 5;
+    text-indent:-99999px;
+}
+
+#nom_page{
+    position:absolute;
+    margin-top:22vh;
+    text-align: center;
+    width:100%;
+}
+
+#connexion
+{
+    z-index: 5;
+    background-color: rgba(255,255,255, 0.5);
+    position: absolute;
+    right:.5%;
+    padding-right: 10px;
+    top:0;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+#flottant
+{
+    width:99%;
+    right:.5%;
+    left:.5%;
+    text-align: center;
+    z-index:4;
+    position: fixed;
+    height: 22%;
+    background-image: url("../Images/Back.jpg");
+    background-size: cover;
+}
+
+nav
+{
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    width: 50%;
+    display:flex;
+    margin:auto;
+}
+
+nav li
+{
+    text-align: center;
+}
+
+nav a
+{
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width:25%;                      /* à changer pour qqch avec les propriétés de flex*/
+    background-color: #f1f1f1;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover
+{
+    background-color: #555;
+    color: white;
+}  
+
+footer
+{
+    text-align: center;
+}
+
+footer a
+{
+    text-decoration: none;
+    text-align: center;
+    width:100%;
+}

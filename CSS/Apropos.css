@@ -1,0 +1,36 @@
+#a_propos
+{
+    background-color: rgba(121,121,121);    /*à appliquer sur la page active à chaque fois*/
+}
+
+#corps
+{
+    position: absolute;
+    margin-top:28vh;
+    text-align: center;
+    width:100%;
+}
+
+ul li
+{
+    position: relative;
+    list-style:none;
+    left:-1% ;
+    display: inline;
+}
+
+ul li img{
+    width:2.5%;
+}
+
+#SNPN{
+    width:5%;
+}
+
+#WWF{
+    width:3.3%;
+}
+
+footer{
+    margin-top: 85vh;
+}

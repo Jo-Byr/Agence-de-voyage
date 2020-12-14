@@ -1,0 +1,17 @@
+#reservations
+{
+    background-color: rgba(121,121,121);    /*à appliquer sur la page active à chaque fois*/
+}  
+ 
+
+#panier
+{
+    position: absolute;
+    margin-top:28vh;
+    text-align: center;
+    width:100%;
+}
+
+footer{
+    margin-top: 85vh;
+}
