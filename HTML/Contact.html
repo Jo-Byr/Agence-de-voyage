@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang=fr>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../CSS/Contact.css" />
+        <link rel="stylesheet" href="../CSS/Commun.css" />
+        <title>Contact</title>
+    </head>
+
+    <body> 
+        <button id="scroll_top_button" onclick="goTop()">Scroll top</button>
+
+        <button id="back_button" onclick="goBack()">Go back</button>
+
+        <div id="connexion">
+            <form action=none method="GET">
+                <label for="mail_connexion">Mail :</label><br>
+                <input type="text" name="mail" id="mail_connexion"><br>
+                <label for="pass">Mot de passe :</label><br>
+                <input type="password" id="pass" name="password" required><br><br>
+
+            </form>
+            <input type="submit" value="Connexion" id="bouton" onclick="connexion()">
+        </div>
+            
+        <header id="flottant">
+
+            <img src="../Images/LogoSF.png" alt="Logo de la compagnie" id="logo">
+
+            <nav>
+                <a id="accueil" href="Main.html">Accueil</a>
+                <a id="reservations" href="Panier.html">Réservations</a>
+                <a id="a_propos" href="Apropos.html">A propos</a>
+                <a id="contact" href="Contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <br>
+
+        <h1 id="nom_page">Contact</h1>
+        
+        <div id="corps">
+            <br>
+            Adresse : Campus Lyontech, 3 Rue Victor Grignard, 69100 Villeurbanne
+            <br>
+            Numéro de téléphone : 
+            <a href='tel:0688800504'>06 88 80 05 04</a>
+            <br>
+            Mail : 
+            <a href= 'mailto:agence.fictive@gmail.com?subject=Demande%20de%20renseignements&body=Bonjour,%20je%20souhaiterais%20obtenir%20des%20renseignements%20sur%20'>agence.fictive@gmail.com</a>
+        </div>
+
+        <footer>
+            <p><a href="Confidentialite.html">Politique de Confidentialité</a></p>
+            <p>© 2020</p>
+        </footer>
+        <script src="../JS/Commun.js"></script>
+    </body>
+</html>

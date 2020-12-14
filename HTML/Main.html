@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang=fr>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../CSS/Main.css" />
+        <link rel="stylesheet" href="../CSS/Commun.css" />
+        <title>Accueil</title>
+    </head>
+
+    <body onload="request()"> 
+        <button id="scroll_top_button" onclick="goTop()">Scroll top</button>
+
+        <button id="back_button" onclick="goBack()">Go back</button>
+
+        <div id="connexion">
+            <form action=none method="GET">
+                <label for="mail_connexion">Mail :</label><br>
+                <input type="text" name="mail" id="mail_connexion"><br>
+                <label for="pass">Mot de passe :</label><br>
+                <input type="password" id="pass" name="password" required><br><br>
+
+            </form>
+            <input type="submit" value="Connexion" id="bouton" onclick="connexion()">
+        </div>
+            
+        <header id="flottant">
+
+            <img src="../Images/LogoSF.png" id="logo" alt="Logo de la compagnie">
+
+            <nav>
+                <a id="accueil" href="Main.html">Accueil</a>
+                <a id="reservations" href="Panier.html">Réservations</a>
+                <a id="a_propos" href="Apropos.html">A propos</a>
+                <a id="contact" href="Contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <br>
+
+        <h1 id = "nom_page">Accueil</h1>
+
+        <button id="lien_carte" onclick="openMap()">Carte des destinations disponibles</button>
+
+        <div id="filtres">
+            <form id = "form_filtres">
+            <h2>Filtres</h2>
+                <ul>
+                    <li>
+                        <h3><label for="prix_max">Prix maximum</label></h3>
+                        <input type="range" id="prix_max" min="30" max="100" step="5" value = "100" oninput="prix_max_disp.value = prix_max.value;filtrage()">
+                        <output id="prix_max_disp"></output>
+                    </li>
+
+                    <li>
+                        <h3><label for="prix_min">Prix minimum</label></h3>
+                        <input type="range" id="prix_min" min="30" max="100" step="5" value = "30" oninput="prix_min_disp.value = prix_min.value;filtrage()">
+                        <output id="prix_min_disp"></output>
+                    </li>
+
+                    <li>
+                        <fieldset>
+                        <legend><h3>Continent</h3></legend>
+                        <ul id="filtre_continent">
+                            <li><input type="radio" onclick="filtrage()" name="continent" id = "europe" value="Europe"><label for="europe">Europe</label></li>
+                            <li><input type="radio" onclick="filtrage()" name="continent" id = "asie" value="Asie"><label for="asie">Asie</label></li>
+                            <li><input type="radio" onclick="filtrage()" name="continent" id= "amerique" value="Amérique"><label for="amerique">Amérique</label></li>
+                            <li><input type="radio" onclick="filtrage()" name="continent" id = "oceanie" value="Océanie"><label for="oceanie">Océanie</label></li>
+                            <li><input type="radio" onclick="filtrage()" name="continent" id = "afrique" value="Afrique"><label for="afrique">Afrique</label></li>
+                            <li><input type="radio" onclick="filtrage()" name="continent" id = "nimporte" value="none" checked><label for="nimporte">N'importe</label></li>
+                        </ul>
+                        </fieldset>
+                    </li>
+
+                    <li>
+                        <h3><label for="filtre_date">Date de départ</label></h3>
+                        <input type="date" name="filtre_date" id="filtre_date" onchange="filtrage()" min="2021-01-01" max="2021-12-31">
+                        <button id = "date_reinit_button" onclick= "return reinitDate()">Réinitialiser</button>
+                    </li>
+
+                    <li>
+                        <fieldset>
+                        <legend><h3>Animaux autorisés</h3></legend>
+                        <ul id="filtre_animal">
+                            <li><input type="radio" id="animal_1" onclick="filtrage()" name="animal" value=1><label for = "animal_1">Oui</label></li>
+                            <li><input type="radio" id="animal_0"  onclick="filtrage()" name="animal" value=0><label for = "animal_0">Non</label></li>
+                            <li><input type="radio" id="animal_2"  onclick="filtrage()" name="animal" value=2 checked><label for = "animal_2">N'importe</label></li>
+                        </ul>
+                        </fieldset>
+                    </li>
+                </ul>
+            </form>
+            <br>
+            <div id="resultats"></div>
+        </div>
+
+        <br>
+
+        <div id="destinations">
+            <template class="template_destination">
+                <article>
+                <a href="Reservation.html?id={{num_id}}" class="href_destination" id="{{num_id}}">
+                    <div class="div_destination">
+                        <div class="nom">{{nom}}</div>
+                        <div class="dates_nndispo">Cette destination n'est pas disponibles du {{date1}} au {{date2}}</div>
+                        <div class="temp">{{temp}}</div>
+                        <div class="prix">{{prix}}</div>
+                        <img src = "" class="im1" alt = "Image n°1 de {{nom}}">
+                        <img src = "" class="im2" alt = "Image n°2 de {{nom}}">
+                    </div>
+                </a>
+                </article>
+            </template>
+        </div>
+
+        <footer>
+            <p><a href="Confidentialite.html">Politique de Confidentialité</a></p>
+            <p>Tous les voyages sur cette page sont fictifs, de même que les prixs. L'adresse mail renseignée page A propos est fictive, mais le numéro de téléphone est réel, ne l'appelez pas s'il vous plaît.</p>
+            <p>© 2020</p>
+        </footer>
+
+        <script src="../JS/Commun.js"></script>
+        <script src="../JS/Main.js"></script>
+    </body>
+</html>

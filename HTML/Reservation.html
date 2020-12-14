@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang=fr>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../CSS/Commun.css" />
+        <link rel="stylesheet" href="../CSS/Reservation.css" />
+        <title>Reservation</title>
+    </head>
+
+    <body onload="fill()"> 
+        <button id="scroll_top_button" onclick="goTop()">Scroll top</button>
+
+        <button id="back_button" onclick="goBack()">Go back</button>
+
+        <div id="connexion">
+            <form action=none method="GET">
+                <label for="mail_connexion">Mail :</label><br>
+                <input type="text" name="mail" id="mail_connexion"><br>
+                <label for="pass">Mot de passe :</label><br>
+                <input type="password" id="pass" name="password" required><br><br>
+
+            </form>
+            <input type="submit" value="Connexion" id="bouton" onclick="connexion()">
+        </div>
+            
+        <header id="flottant">
+
+            <img src="../Images/LogoSF.png" alt="Logo de la compagnie" id="logo">
+
+            <nav>
+                <a id="accueil" href="Main.html">Accueil</a>
+                <a id="reservations" href="Panier.html">Réservations</a>
+                <a id="a_propos" href="Apropos.html">A propos</a>
+                <a id="contact" href="Contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <br>
+
+        <div id="offre">
+            <div id="destination">
+                <template class="template_destination">
+                    <h1>{{nom}}</h1>
+                </template>
+            </div>
+
+            <form id = "form_reservation">
+                <div id="label">
+                    <p><label for = "nom">Nom : </label><br></p>
+                    <p><label for = "prenom">Prénom : </label><br></p>
+                    <p><label for = "mail_reservation">Adresse mail : </label><br></p>
+                    <p><label for = "depart">Date de départ : </label><br></p>
+                    <p><label for = "retour">Date de retour : </label><br></p>
+                    <p><label for = "nb_adultes">Nombres d'adultes : </label><br></p>
+                    <p><label for = "nb_enfants">Nombres d'enfants (-12 ans) : </label><br></p>    
+                </div>      
+                <div id='input'>
+                    <p class="p_input"><input type = "text" name = "nom" id = "nom" onchange="modif()" required><br></p>
+                    <p class="p_input"><input type = "text" name = "prenom" id = "prenom" onchange="modif()" required><br></p>
+                    <p class="p_input"><input type = "email" name = "mail" id = "mail_reservation" onchange="modif()" required><br></p>
+                    <p class="p_input"><input type = "date" name = "depart" id = "depart" onchange="modif()" min="2021-01-01" max="2021-12-31" required><br></p>
+                    <p class="p_input"><input type = "date" name = "retour" id = "retour" onchange="modif()" min="2021-01-01" max="2021-12-31" required><br></p>
+                    <p class="p_input"><input type = "number" name = "nb_adultes" id = "nb_adultes" onchange="modif()" required><br></p>
+                    <p class="p_input"><input type = "number" name = "nb_enfants" id = "nb_enfants" onchange="modif()" required><br></p>
+                </div>
+                <br>
+                <p>Prix : <output id='prix'> </output></p>
+                <button type="button" value="valider" onclick="validation()">Valider</button>   <!-- On voudrait avoir un submit ici mais ça reload la page et empêche les vérifications-->
+            </form>
+            <br>
+            <div id="erreur"></div>
+            <br>
+            <div id="div_dates">
+                
+            </div>
+        </div>
+
+        <footer>
+            <p><a href="Confidentialite.html">Politique de Confidentialité</a></p>
+            <p>© 2020</p>
+        </footer>
+        <script src="../JS/Commun.js"></script>
+        <script src="../JS/Destinations.js"></script>
+    </body>
+</html>

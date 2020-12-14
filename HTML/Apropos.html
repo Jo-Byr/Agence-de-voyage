@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang=fr>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../CSS/Apropos.css" />
+        <link rel="stylesheet" href="../CSS/Commun.css" />
+        <title>A propos</title>
+    </head>
+
+    <body> 
+        <button id="scroll_top_button" onclick="goTop()">Scroll top</button>
+
+        <button id="back_button" onclick="goBack()">Go back</button>
+
+        <div id="connexion">
+            <form action=none method="GET">
+                <label for="mail_connexion">Mail :</label><br>
+                <input type="text" name="mail" id="mail_connexion"><br>
+                <label for="pass">Mot de passe :</label><br>
+                <input type="password" id="pass" name="password" required><br><br>
+
+            </form>
+            <input type="submit" value="Connexion" id="bouton" onclick="connexion()">
+        </div>
+            
+        <header id="flottant">
+
+            <img src="../Images/LogoSF.png" id="logo" alt="Logo de la compagnie">
+
+            <nav>
+                <a id="accueil" href="Main.html">Accueil</a>
+                <a id="reservations" href="Panier.html">Réservations</a>
+                <a id="a_propos" href="Apropos.html">A propos</a>
+                <a id="contact" href="Contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <br>
+
+        <h1 id="nom_page">A Propos</h1>
+
+        <div id="corps">
+            <br>
+
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel auctor metus, facilisis aliquet massa. <br>
+            Orci a scelerisque purus semper eget duis at. Fermentum dui faucibus in ornare quam viverra orci sagittis.<br>
+            Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi. Nunc id cursus metus aliquam eleifend mi.<br>
+            Elementum nisi quis eleifend quam adipiscing vitae proin. Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit.<br>
+            Mattis nunc sed blandit libero volutpat sed cras ornare arcu. Turpis egestas integer eget aliquet nibh praesent tristique.<br>
+            <br>
+            Integer vitae justo eget magna fermentum iaculis eu non. Risus quis varius quam quisque id diam.<br>
+            Posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Ut faucibus pulvinar elementum integer enim neque.<br>
+            Sed sed risus pretium quam vulputate dignissim. Fames ac turpis egestas integer.<br>
+            Ultricies tristique nulla aliquet enim tortor at. Ut placerat orci nulla pellentesque dignissim.<br>
+            Mauris sit amet massa vitae. Sed turpis tincidunt id aliquet risus feugiat. Lectus quam id leo in.
+            </p>
+
+            Moyens de paiement
+            <br>
+            <img src="../Images/paiement.png" alt="Moyens de paiement disponibles : Carte Bleue, Visa, MasterCard" width="200">
+
+            <br>
+
+            Réseaux sociaux
+            <br>
+            <ul>
+                <li><img src="../Images/RéseauxSociaux/fb.webp" alt="Lien page Facebook" id="fb"></li>
+                <li><img src="../Images/RéseauxSociaux/twitter.png" alt="Lien page Twitter" id ="twitter"></li>
+                <li><img src="../Images/RéseauxSociaux/insta.png" alt="Lien Page Instagram" id="insta"></li>
+            </ul>
+            <br>
+
+            Partenaires
+            <br>
+            <img id="SNPN" src="../Images/Partenaires/SNPN.png" alt="Logo partenaire : SNPN">
+            <img id="WWF" src="../Images/Partenaires/WWF.jpg" alt="Logo partenaire : WWF">
+
+        </div>
+
+        <footer>
+            <p><a href="Confidentialite.html">Politique de Confidentialité</a></p>
+            <p>© 2020</p>
+        </footer>
+        <script src="../JS/Commun.js"></script>
+    </body>
+</html>

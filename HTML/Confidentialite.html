@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang=fr>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../CSS/Confidentialite.css" />
+        <link rel="stylesheet" href="../CSS/Commun.css" />
+        <title>Accueil</title>
+    </head>
+
+    <body onload>  
+        <button id="scroll_top_button" onclick="goTop()">Scroll top</button>
+
+        <button id="back_button" onclick="goBack()">Go back</button>
+
+        <div id="connexion">
+            <form action=none method="GET">
+                <label for="mail_connexion">Mail :</label><br>
+                <input type="text" name="mail" id="mail_connexion"><br>
+                <label for="pass">Mot de passe :</label><br>
+                <input type="password" id="pass" name="password" required><br><br>
+
+            </form>
+            <input type="submit" value="Connexion" id="bouton" onclick="connexion()">
+        </div>
+            
+        <header id="flottant">
+
+            <img src="../Images/LogoSF.png" id="logo" alt="Logo de la compagnie">
+
+            <nav>
+                <a id="accueil" href="Main.html">Accueil</a>
+                <a id="réservations" href="Panier.html">Réservations</a>
+                <a id="a_propos" href="Apropos.html">A propos</a>
+                <a id="contact" href="Contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <br>
+
+        <h1 id="nom_page">Politique de confidentialité  </h1>
+
+        <p id='txt'>
+            Nous ne collectons aucune donnée.
+        </p>
+
+        <footer>
+            <p><a href="Confidentialite.html">Politique de Confidentialité</a></p>
+            <p>© 2020</p>
+        </footer>
+        <script src="../JS/Commun.js"></script>
+    </body>
+</html>

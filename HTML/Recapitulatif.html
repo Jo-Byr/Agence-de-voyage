@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang=fr>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../CSS/Recapitulatif.css" />
+        <link rel="stylesheet" href="../CSS/Commun.css" />
+        <title>Récpitulatif de réservation</title>
+    </head>
+
+    <body onload="fill()"> 
+        <button id="scroll_top_button" onclick="goTop()">Scroll top</button>
+
+        <button id="back_button" onclick="goBack()">Go back</button>
+
+        <div id="connexion">
+            <form action=none method="GET">
+                <label for="mail_connexion">Mail :</label><br>
+                <input type="text" name="mail" id="mail_connexion"><br>
+                <label for="pass">Mot de passe :</label><br>
+                <input type="password" id="pass" name="password" required><br><br>
+
+            </form>
+            <input type="submit" value="Connexion" id="bouton" onclick="connexion()">
+        </div>
+            
+        <header id="flottant">
+
+            <img src="../Images/LogoSF.png" id="logo" alt="Logo de la compagnie">
+
+            <nav>
+                <a id="accueil" href="Main.html">Accueil</a>
+                <a id="réservations" href="Panier.html">Réservations</a>
+                <a id="a_propos" href="Apropos.html">A propos</a>
+                <a id="contact" href="Contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <br>
+        
+        <div id="recapitulatif">
+            <h1>Récapitulatif de réservation</h1>
+                <p id="p_destination">Destination : </p>
+                <p id="p_nom">Nom : </p>
+                <p id="p_prenom">Prénom : </p>
+                <p id="p_mail">Adresse mail : </p>
+                <p id="p_depart">Date de départ : </p>
+                <p id="p_retour">Date de retour : </p>
+                <p id="p_adultes">Nombre d'adultes : </p>
+                <p id="p_enfants">Nombre d'enfants : </p>
+                <p id="p_numero"></p>
+                <br>
+                <button id="button_validation" onclick="validationReservation()">Valider</button>
+                <br>
+                <p>S'il y a une erreur, vous pouvez retourner à la page précédente avec le bouton de retour en haut à gauche de l'écran.</p>
+        </div>
+
+        <footer>
+            <p><a href="Confidentialite.html">Politique de Confidentialité</a></p>
+            <p>© 2020</p>
+        </footer>
+        <script src="../JS/Commun.js"></script>
+        <script src="../JS/Destinations.js"></script>
+        <script src="../JS/Recapitulatif.js"></script>
+    </body>
+</html>
